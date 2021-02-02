@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/two-sum-ii-input-array-is-sorted.js"
+            "program": "${workspaceFolder}/best-time-to-buy-and-sell-stock.js"
         }
     ]
 }
