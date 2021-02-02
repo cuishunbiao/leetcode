@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/pascals-trangle.js"
+            "program": "${workspaceFolder}/two-sum-ii-input-array-is-sorted.js"
         }
     ]
 }
