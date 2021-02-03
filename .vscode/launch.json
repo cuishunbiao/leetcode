@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/find-all-duplicates-in-an-array.js"
+            "program": "${workspaceFolder}/src/150/product-of-array-except-self.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
