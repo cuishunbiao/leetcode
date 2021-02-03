@@ -12,33 +12,33 @@
  *      如果小于最小值，则赋值最小值，直接进入下一次循环；
  * 
  */
-let maxProfit = function (prices) {
-    let lirun = 0;
-    let minNum = prices[0];
-    for (let i = 1; i < prices.length; i++) {
-        if (prices[i] >= minNum) {
-            lirun = (prices[i] - minNum > lirun) ? prices[i] - minNum : lirun;
-        } else {
-            minNum = prices[i];
-        }
-    }
-    return lirun;
-}
+// let maxProfit = function (prices) {
+//     let lirun = 0;
+//     let minNum = prices[0];
+//     for (let i = 1; i < prices.length; i++) {
+//         if (prices[i] >= minNum) {
+//             lirun = (prices[i] - minNum > lirun) ? prices[i] - minNum : lirun;
+//         } else {
+//             minNum = prices[i];
+//         }
+//     }
+//     return lirun;
+// }
 
 /**
  * 第二种方式
  * 执行用时: 112 ms，超过36%
  * 内存消耗: 47.4 MB，超过16%
  */
-let maxProfit = function (prices) {
-    let lirun = 0;
-    let minNum = prices[0];
-    for (let i = 1; i < prices.length; i++) {
-        minNum = Math.min(minNum, prices[i]);//求最小值
-        lirun = Math.max(lirun,prices[i] - minNum)
-    }
-    return lirun;
-}
+// let maxProfit = function (prices) {
+//     let lirun = 0;
+//     let minNum = prices[0];
+//     for (let i = 1; i < prices.length; i++) {
+//         minNum = Math.min(minNum, prices[i]);//求最小值
+//         lirun = Math.max(lirun,prices[i] - minNum)
+//     }
+//     return lirun;
+// }
 
 /**
  * 第三种方式
