@@ -7,11 +7,14 @@
  * if (nums[i] === 0) then newNums[left] = 0;
  * if (nums[i] === 2) then newNums[right] = 2;
  * return newNums
+ * 
+ * 核心点在于「i值的增加」
+ * 
  */
 var sortColors = function (nums) {
     let left = 0, right = nums.length - 1, i = 0;
     while (i <= right) {
-        console.log(nums[i])
+        console.log(i, left, right, nums[i], nums)
         if (nums[i] === 0) {
             [nums[i], nums[left]] = [nums[left], nums[i]]
             left++;
