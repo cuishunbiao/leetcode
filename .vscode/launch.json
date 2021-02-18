@@ -11,7 +11,7 @@
             "skipFiles": [
                 "<node_internals>/**"
             ],
-            "program": "${workspaceFolder}/contains-duplicate.js"
+            "program": "${workspaceFolder}/contains-duplicate-ii.js"
         }
     ]
 }
