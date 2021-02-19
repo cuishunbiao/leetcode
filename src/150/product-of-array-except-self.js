@@ -12,7 +12,7 @@ var productExceptSelf = function (nums) {
     }
     let rightProduct = 1
     for (let j = answer.length - 1; j >= 0; j--) {
-        answer[j] = rightProduct
+        answer[j] *= rightProduct
         rightProduct *= nums[j]
     }
     return answer;
