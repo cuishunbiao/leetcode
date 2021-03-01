@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/third-maximum-number.js"
+      "program": "${workspaceFolder}/longest-continuous-increasing-subsequence.js"
     }
   ]
 }
