@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/longest-continuous-increasing-subsequence.js"
+      "program": "${workspaceFolder}/find-all-numbers-disappeared-in-an-array.js"
     }
   ]
 }
