@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/move-zeroes.js"
+      "program": "${workspaceFolder}/third-maximum-number.js"
     }
   ]
 }
