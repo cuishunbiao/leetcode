@@ -24,21 +24,40 @@
 // };
 
 
-var findDisappearedNumbers = function (nums) {
-    //先把数字放到对应的位置上；
-    const n = nums.length;
-    for (const num of nums) {
-        nums[num - 1] += n;
-    }
-    return nums
-    // const ret = [];
-    // for (const [i, num] of nums.entries()) {
-    //     if (num <= n) {
-    //         ret.push(i + 1);
-    //     }
-    // }
-    // return ret;
-};
+// var findDisappearedNumbers = function (nums) {
+//     //先把数字放到对应的位置上；
+//     const n = nums.length;
+//     for (const num of nums) {
+//         nums[num - 1] += n;
+//     }
+//     return nums
+//     // const ret = [];
+//     // for (const [i, num] of nums.entries()) {
+//     //     if (num <= n) {
+//     //         ret.push(i + 1);
+//     //     }
+//     // }
+//     // return ret;
+// };
 
+var findDisappearedNumbers = function (nums) {
+    //先循环一次数组，加上最大长度。因为题目里的数据格式为[1,2,3,4,5,6,7,8]，假设数组长度是多少，里面的数字就是怎样排列的。
+    //关键点在于：取余。在循环中，前面的数字会改变后面数字的值，当想获取到原来的值，就需要取余数，加的几，取余数就是几。这样可以得到原来的数。
+    let n = nums.length;//定义余数
+    for (let num of nums) {
+        //获取下标
+        const x = (num - 1) % n;
+        nums[x] += n
+    }
+    let arr = []
+    for (let [index, result] of nums.entries()) {
+        if (result <= n) {
+            arr.push(index + 1)
+        }
+    }
+    return arr
+}
 
 console.log(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1]))
+//[4, 3, 2, 7, 8, 2, 3, 1]
+//[1, 2, 3, 4, 5, 6, 7, 8]
