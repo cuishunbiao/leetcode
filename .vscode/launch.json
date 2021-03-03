@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/find-all-numbers-disappeared-in-an-array.js"
+      "program": "${workspaceFolder}/decode-string.js"
     }
   ]
 }
