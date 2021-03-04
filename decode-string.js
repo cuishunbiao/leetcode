@@ -20,35 +20,42 @@ var decodeString = function (s) {
         ']': '['
     }
 
-    let structure = {
-        number: 0,
-        letter: ''
-    }
+    let structure = []
     for (let code of s) {
-        if (typeof code === Number) {
-            structure.number = code;
+        if (!isNaN(parseInt(code, 10))) {
+            structure.push({
+                number: code,
+                letter: '',
+                leftLaber: false,
+                rightLaber: false,
+            })
         } else if (code === '[') {
-
+            structure[0].leftLaber = true;
+            continue;
+        } else if (code === ']') {
+            structure[0].rightLaber = true;
+            continue;
+        } else {
+            if (structure[0].leftLaber) {
+                structure[0].letter += code;
+            }
         }
     }
-
-
-
-
-
+    debugger
+    console.log(structure)
 
 
     //一个循环函数
-    function loopCode(number, code) {
-        let resultCode = '';
-        while (number) {
-            resultCode += code
-            number--
-        }
-        return resultCode;
-    }
-    console.log(loopCode(3, 'a'))
+    // function loopCode(number, code) {
+    //     let resultCode = '';
+    //     while (number) {
+    //         resultCode += code
+    //         number--
+    //     }
+    //     return resultCode;
+    // }
+    // console.log(loopCode(3, 'a'))
 
 };
 
-decodeString()
+decodeString('3[abcd]')
