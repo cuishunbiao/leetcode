@@ -20,42 +20,79 @@ var decodeString = function (s) {
         ']': '['
     }
 
-    let structure = []
+
+    // structure = {
+    //     number: 3,
+    //     letter: 'a',
+    //     leftLaber: false,
+    //     rightLaber: false,
+    //     child: [
+    //         {
+    //             number: 2,
+    //             letter: 'b',
+    //             leftLaber: false,
+    //             rightLaber: false,
+    //         }
+    //     ]
+    // }
+
+    let structure = {}
     for (let code of s) {
         if (!isNaN(parseInt(code, 10))) {
-            structure.push({
+            structure = {
                 number: code,
                 letter: '',
                 leftLaber: false,
                 rightLaber: false,
-            })
+            }
         } else if (code === '[') {
-            structure[0].leftLaber = true;
+            structure.leftLaber = true;
             continue;
         } else if (code === ']') {
-            structure[0].rightLaber = true;
-            continue;
+            structure.rightLaber = true;
+            result = loopCode(structure.number, structure.letter)
+            return result
         } else {
-            if (structure[0].leftLaber) {
-                structure[0].letter += code;
+            if (structure.child && structure.child.length) {
+                structure.child.letter += code;
+            } else {
+                structure.letter += code;
             }
         }
     }
-    debugger
-    console.log(structure)
-
+    // function splitFn(code){
+    //     if (!isNaN(parseInt(code, 10))) {
+    //         structure.push({
+    //             number: code,
+    //             letter: '',
+    //             leftLaber: false,
+    //             rightLaber: false,
+    //         })
+    //     } else if (code === '[') {
+    //         if (structure.leftLaber)
+    //             structure.leftLaber = true;
+    //         continue;
+    //     } else if (code === ']') {
+    //         structure.rightLaber = true;
+    //         result = loopCode(structure.number, structure.letter)
+    //         return result
+    //     } else {
+    //         if (structure.leftLaber) {
+    //             structure.letter += code;
+    //         }
+    //     }
+    // }
 
     //一个循环函数
-    // function loopCode(number, code) {
-    //     let resultCode = '';
-    //     while (number) {
-    //         resultCode += code
-    //         number--
-    //     }
-    //     return resultCode;
-    // }
-    // console.log(loopCode(3, 'a'))
+    function loopCode(number, code) {
+        let resultCode = '';
+        while (number) {
+            resultCode += code
+            number--
+        }
+        return resultCode;
+    }
 
 };
 
-decodeString('3[abcd]')
+console.log(decodeString('3[a2[b]]'))
