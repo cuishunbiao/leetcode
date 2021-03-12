@@ -12,6 +12,53 @@
  *
  * 
  */
+
+//  let numberStack = [];
+//  let stringStack = [];
+//  let isNumberAdd = false;
+//  let index = 0;
+//  for (let i = 0; i < s.length; i++) {
+//      //进入 数字栈
+//      if (!isNaN(parseInt(s[i], 10))) {
+//          if (isNumberAdd) {
+//              numberStack[numberStack.length - 1] = numberStack[numberStack.length - 1] + s[i];
+//              continue;
+//          }
+//          numberStack.push(s[i]);
+//          index = i;
+//          isNumberAdd = true;
+//      } else {
+//          isNumberAdd = false;
+//          //如果是 ] 括号，则出栈
+//          code = s[i];
+//          if (code === ']') {
+//              let newCode = ''
+//              let n = stringStack.length - 1;
+//              while (n >= 0) {
+//                  if (stringStack[n] === '[') {
+//                      stringStack.pop()
+//                      break;
+//                  } else {
+//                      newCode = stringStack.pop() + newCode;
+//                  }
+//                  n--;
+//              }
+//              code = loopCode(numberStack.pop(), newCode);
+//          }
+//          stringStack.push(code)
+//      }
+//  }
+//  return stringStack.join('');
+//  //一个循环函数
+//  function loopCode(number, code) {
+//      let resultCode = '';
+//      while (number) {
+//          resultCode += code
+//          number--
+//      }
+//      return resultCode;
+//  }
+
 var decodeString = function (s) {
     /**
      * 定义两个栈，存放数字和字符串，当遇到 [ 时，则进栈。进栈的有 数字和[
