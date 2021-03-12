@@ -14,55 +14,36 @@
  */
 var decodeString = function (s) {
     /**
-     * 还是要出入栈，出入栈必须匹配
-     * 定义一个数据结构，来存放数字和需要循环的字符，并传值到 loopCode 里「structure」
-     * 需要整理数据结构
+     * 定义两个栈，存放数字和字符串，当遇到 [ 时，则进栈。进栈的有 数字和[
+     * 遇到 ] 出栈
+     * 循环数字的时候用 repeat(number)
+     * 
      */
-    let numberStack = [];
-    let stringStack = [];
-    let isNumberAdd = false;
-    let index = 0;
-    for (let i = 0; i < s.length; i++) {
-        //进入 数字栈
-        if (!isNaN(parseInt(s[i], 10))) {
-            if (isNumberAdd) {
-                numberStack[numberStack.length - 1] = numberStack[numberStack.length - 1] + s[i];
-                continue;
-            }
-            numberStack.push(s[i]);
-            index = i;
-            isNumberAdd = true;
+
+    let numberStack = [];//数字栈
+    let stringStack = [];//字符串栈
+    let num = 0, str = '', result = '';
+
+    for (let code of s) {
+        debugger
+        if (!isNaN(code)) {
+            num = num * 10 + Number(code);
+        } else if (code === '[') {
+            //进栈
+            numberStack.push(num);
+            stringStack.push(str)
+            num = 0;
+            str = ''
+        } else if (code === ']') {
+            //出栈
+            const num = numberStack.pop();
+            str = stringStack.pop() + str.repeat(num)
         } else {
-            isNumberAdd = false;
-            //如果是 ] 括号，则出栈
-            code = s[i];
-            if (code === ']') {
-                let newCode = ''
-                let n = stringStack.length - 1;
-                while (n >= 0) {
-                    if (stringStack[n] === '[') {
-                        stringStack.pop()
-                        break;
-                    } else {
-                        newCode = stringStack.pop() + newCode;
-                    }
-                    n--;
-                }
-                code = loopCode(numberStack.pop(), newCode);
-            }
-            stringStack.push(code)
+            str += code;
         }
     }
-    return stringStack.join('');
-    //一个循环函数
-    function loopCode(number, code) {
-        let resultCode = '';
-        while (number) {
-            resultCode += code
-            number--
-        }
-        return resultCode;
-    }
+
+    return result
 };
 
-console.log(decodeString("3[a10[b]]"))
+console.log(decodeString('3[a]2[bc]'))
