@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/max-consecutive-ones.js"
+      "program": "${workspaceFolder}/find-the-difference.js"
     }
   ]
 }

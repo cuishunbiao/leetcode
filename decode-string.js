@@ -69,10 +69,9 @@ var decodeString = function (s) {
 
     let numberStack = [];//数字栈
     let stringStack = [];//字符串栈
-    let num = 0, str = '', result = '';
+    let num = 0, str = '';
 
     for (let code of s) {
-        debugger
         if (!isNaN(code)) {
             num = num * 10 + Number(code);
         } else if (code === '[') {
@@ -90,7 +89,7 @@ var decodeString = function (s) {
         }
     }
 
-    return result
+    return str
 };
 
-console.log(decodeString('3[a]2[bc]'))
+console.log(decodeString("3[a]2[bc]"))
