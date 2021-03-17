@@ -13,9 +13,20 @@
 
  */
 var findTheDifference = function (s, t) {
+    let snum = 0, tnum = 0;
     for (let code of s) {
-        t = t.replace(code, '')
+        snum += code.charCodeAt()
     }
-    return t
+    for (let code of t) {
+        tnum += code.charCodeAt()
+    }
+    let result = String.fromCharCode(tnum - snum)
+    return result
 };
+
+// var findTheDifference = function (s, t) {
+//     const snum = s.split('').reduce((a, b) => a + b.charCodeAt(0), 0)
+//     const tnum = t.split('').reduce((a, b) => a + b.charCodeAt(0), 0)
+//     return String.fromCharCode(tnum - snum)
+// };
 console.log(findTheDifference("", "y"))

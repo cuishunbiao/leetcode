@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/find-the-difference.js"
+      "program": "${workspaceFolder}/word-pattern.js"
     }
   ]
 }
