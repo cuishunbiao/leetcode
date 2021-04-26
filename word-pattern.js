@@ -55,4 +55,28 @@ var wordPattern = function (pattern, s) {
 
 };
 
-console.log(wordPattern("e", "eukera"));
+/**
+ * @param {string} pattern
+ * @param {string} s
+ * @return {boolean}
+ * 先定义两种结构：一种以 pattern 为键 str 为值；
+ * 一种以 str 为键 pattern 为值；
+ * 循环对比
+ * 
+ */
+ var wordPattern = function(pattern, s) {
+    let patternMap = new Map()
+    let stringMap = new Map()
+    const sArr = s.split(' ');//先把传进来的 s 切割成数组去比较是否和字符串长度一致，不一致，则返回 false
+    if( pattern.length !== sArr.length ) return false
+    //先把对应表添加到各自的 Map 里面去
+    for(let [i,item] of sArr.entries()){
+        if( (stringMap.has(item) && stringMap.get(item) !== pattern[i]) || (patternMap.has(pattern[i]) && patternMap.get(pattern[i]) !== item ) ){
+            return false;
+        }
+        stringMap.set(item,pattern[i])
+        patternMap.set(pattern[i],item)
+    }
+    return true
+};
+wordPattern("abba", "dog dog dog dog")
