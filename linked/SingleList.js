@@ -1,6 +1,6 @@
 class Node{
-    constructor(data){
-        this.data = data
+    constructor(val){
+        this.val = val
         this.next = null
         this.prev = null
     }
@@ -8,13 +8,11 @@ class Node{
 class SingleList {
     constructor() {
         this.size = 0 //单链表长度
-        this.head = new Node('head') //链表按节点表示，表头节点
         this.currNode = ''//当前节点指向
     }
     //在单链表中寻找 item 元素
     find(item) {
-        let currNode = this.head
-        while (currNode && (currNode.data !== item)) {
+        while (currNode && (currNode.val !== item)) {
             currNode = currNode.next
         }
         return currNode
@@ -27,7 +25,6 @@ class SingleList {
         let newNode = new Node(element)
         newNode.next = itemNode.next;
         itemNode.next = newNode
-
         this.size++
     }
     //在单链表移出一个元素
@@ -36,6 +33,7 @@ class SingleList {
     }
     //在单链表尾部添加一个节点
     append(element) {
+        debugger
         let currNode = this.findLast();
         let newNode = new Node(element);
 
@@ -44,8 +42,9 @@ class SingleList {
     }
     //获取单链最后一个节点
     findLast() {
-        let currNode = this.head;
-        while (currNode.next) {
+        debugger
+        currNode = this.currNode
+        while ( currNode && currNode.next) {
             currNode = currNode.next
         }
         return currNode
@@ -69,9 +68,9 @@ class SingleList {
     //单链表的遍历显示
     display() {
         let result = ''
-        let currNode = this.head
+        let currNode = this.val
         while (currNode) {
-            result += currNode.data
+            result += currNode.val
             currNode = currNode.next
             if (currNode) {
                 result += '->'
@@ -84,9 +83,11 @@ class SingleList {
 
     }
 }
-let mylist = new SingleList()
-let arr = [1,2,3,4]
-for(let num of arr){
-    mylist.append(num)
-}
-console.log(mylist.display());
+
+export default SingleList
+// let mylist = new SingleList()
+// let arr = [1,2,3,4]
+// for(let num of arr){
+//     mylist.append(num)
+// }
+// console.log(mylist.display());
