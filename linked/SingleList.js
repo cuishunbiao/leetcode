@@ -1,5 +1,5 @@
-class Node{
-    constructor(data){
+class Node {
+    constructor(data) {
         this.data = data
         this.next = null
         this.prev = null
@@ -84,9 +84,5 @@ class SingleList {
 
     }
 }
-let mylist = new SingleList()
-let arr = [1,2,3,4]
-for(let num of arr){
-    mylist.append(num)
-}
-console.log(mylist.display());
+
+export default SingleList
