@@ -33,7 +33,6 @@ class SingleList {
     }
     //在单链表尾部添加一个节点
     append(element) {
-        debugger
         let currNode = this.findLast();
         let newNode = new Node(element);
 
@@ -42,7 +41,6 @@ class SingleList {
     }
     //获取单链最后一个节点
     findLast() {
-        debugger
         currNode = this.currNode
         while ( currNode && currNode.next) {
             currNode = currNode.next
@@ -84,14 +82,7 @@ class SingleList {
     }
 }
 
-<<<<<<< HEAD
+const abc = new SingleList()
+abc.append([1, 2, 3, 5])
+
 export default SingleList
-=======
-export default SingleList
-// let mylist = new SingleList()
-// let arr = [1,2,3,4]
-// for(let num of arr){
-//     mylist.append(num)
-// }
-// console.log(mylist.display());
->>>>>>> e5d206d2bdf95a750fee6ff0818c206f78ac11e3
