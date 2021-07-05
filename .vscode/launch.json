@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/linked-list-cycle"
+      "program": "${workspaceFolder}/sort-array-by-parity-ii"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]

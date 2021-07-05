@@ -85,4 +85,4 @@ class SingleList {
 const abc = new SingleList()
 abc.append([1, 2, 3, 5])
 
-export default SingleList
+// export default SingleList
