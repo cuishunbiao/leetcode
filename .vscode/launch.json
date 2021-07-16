@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/sort-array-by-parity-ii"
+      "program": "${workspaceFolder}/peak-index-in-a-mountain-array"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
