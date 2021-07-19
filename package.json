@@ -11,7 +11,7 @@
     "url": "git+https://github.com/cuishunbiao/leetcode.git"
   },
   "lint-staged": {
-    "**/*": "prettier --write --ignore-unknown"
+    "src": "prettier --write --ignore-unknown"
   },
   "author": "",
   "license": "ISC",
