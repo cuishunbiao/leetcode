@@ -2,7 +2,7 @@
  * @param {string} s
  * @return {boolean}
  * 出入栈
- * 
+ *
  */
 // var isValid = function (s) {
 //     if (s.length % 2 === 1) return false;
@@ -22,27 +22,27 @@
 // };
 
 var isValid = function (s) {
-    if (s.length % 2 === 1) return false;
-    const stacklist = {
-        ')': '(',
-        '}': '{',
-        ']': '['
+  if (s.length % 2 === 1) return false;
+  const stacklist = {
+    ")": "(",
+    "}": "{",
+    "]": "[",
+  };
+  let stack = [];
+  for (let string of s) {
+    //如果没有这个 key
+    if (!stacklist[string]) {
+      stack.unshift(string);
+      continue;
     }
-    let stack = []
-    for (let string of s) {
-        //如果没有这个 key 
-        if (!stacklist[string]) {
-            stack.unshift(string)
-            continue;
-        }
-        if (stacklist[string] !== stack[0]) {
-            return false
-        } else {
-            stack.shift()
-        }
+    if (stacklist[string] !== stack[0]) {
+      return false;
+    } else {
+      stack.shift();
     }
-    return !stack.length
+  }
+  return !stack.length;
 };
 
-let s = "{[]}"
+let s = "{[]}";
 console.log(isValid(s));

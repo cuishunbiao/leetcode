@@ -17,16 +17,16 @@
  * 用 sort 排序后，再找相临的数字
  */
 var containsDuplicate = function (nums) {
-    nums.sort((a, b) => a - b);
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === nums[i + 1]) return true;
-    }
-    return false;
+  nums.sort((a, b) => a - b);
+  for (let i = 0; i < nums.length; i++) {
+    if (nums[i] === nums[i + 1]) return true;
+  }
+  return false;
 };
 
 /**
  * 用 Set 来存储
- * 
+ *
  */
 // var containsDuplicate = function (nums) {
 //     let newSet = new Set();
@@ -37,4 +37,4 @@ var containsDuplicate = function (nums) {
 //     return false;
 // };
 
-containsDuplicate([1, 2, 3, 4, 1])
+containsDuplicate([1, 2, 3, 4, 1]);

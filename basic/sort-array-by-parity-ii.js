@@ -20,29 +20,25 @@
 //     return newNums
 // };
 
-
 const swap = (A, i, j) => {
-    const temp = A[i];
-    A[i] = A[j];
-    A[j] = temp;
+  const temp = A[i];
+  A[i] = A[j];
+  A[j] = temp;
 };
 var sortArrayByParityII = function (A) {
-    const n = A.length;
-    let j = 1;
-    for (let i = 0; i < n; i += 2) {
-        if (A[i] & 1) {
-            while (A[j] & 1) {
-                j += 2;
-            }
-            swap(A, i, j);
-        }
+  const n = A.length;
+  let j = 1;
+  for (let i = 0; i < n; i += 2) {
+    if (A[i] & 1) {
+      while (A[j] & 1) {
+        j += 2;
+      }
+      swap(A, i, j);
     }
-    return A;
+  }
+  return A;
 };
 
-sortArrayByParityII([1, 3, 4, 6, 5, 2])
+sortArrayByParityII([1, 3, 4, 6, 5, 2]);
 
 // 下标0为偶数
-
-
-

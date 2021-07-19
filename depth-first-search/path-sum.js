@@ -22,12 +22,13 @@
  * @return {boolean}
  */
 var hasPathSum = function (root, targetSum) {
-    if (root == null) return false
-    // 如果存在 left 
-    if (root.left == null && root.right == null) {
-        console.log(targetSum, root.val)
-        return targetSum === root.val
-    } else {
-        hasPathSum(root.left, targetSum - root.val) || hasPathSum(root.right, targetSum - root.right);
-    }
+  if (root == null) return false;
+  // 如果存在 left
+  if (root.left == null && root.right == null) {
+    console.log(targetSum, root.val);
+    return targetSum === root.val;
+  } else {
+    hasPathSum(root.left, targetSum - root.val) ||
+      hasPathSum(root.right, targetSum - root.right);
+  }
 };

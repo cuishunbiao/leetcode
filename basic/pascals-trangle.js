@@ -18,17 +18,16 @@
 //     return nums;
 // };
 
-
 var generate = function (numRows) {
-    let nums = [];
-    for (let i = 0; i < numRows; i++) {
-        let arr = new Array(i + 1).fill(1);
-        for (let j = 1; j < i; j++) {
-            arr[j] = nums[i - 1][j - 1] + nums[i - 1][j];
-        }
-        nums.push(arr)
+  let nums = [];
+  for (let i = 0; i < numRows; i++) {
+    let arr = new Array(i + 1).fill(1);
+    for (let j = 1; j < i; j++) {
+      arr[j] = nums[i - 1][j - 1] + nums[i - 1][j];
     }
-    return nums;
+    nums.push(arr);
+  }
+  return nums;
 };
 
 generate(13);

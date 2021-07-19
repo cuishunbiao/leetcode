@@ -4,17 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "precommit": "webpack  --config ./web/webpack.config.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm test"
-    }
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cuishunbiao/leetcode.git"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +20,7 @@
   },
   "homepage": "https://github.com/cuishunbiao/leetcode#readme",
   "devDependencies": {
-    "husky": "^7.0.1"
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1"
   }
 }

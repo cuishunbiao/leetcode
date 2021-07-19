@@ -1,4 +1,3 @@
-
 // var nums = [3, 5, 6, 8];
 // var target = 11;
 
@@ -21,20 +20,20 @@ var nums = [3, 5, 6, 8];
 var target = 11;
 
 var twoSum = function (nums, target) {
-    let _result = [];
-    for (let currentIndex = 0; currentIndex < nums.length; currentIndex++) {
-        let _num = target - nums[currentIndex];
-        nums.forEach((item, index) => {
-            if (currentIndex >= index) return;
-            if (item === _num) {
-                _result = [currentIndex, index];
-            }
-        })
-        if( _result.length ){
-            break;
-        }
+  let _result = [];
+  for (let currentIndex = 0; currentIndex < nums.length; currentIndex++) {
+    let _num = target - nums[currentIndex];
+    nums.forEach((item, index) => {
+      if (currentIndex >= index) return;
+      if (item === _num) {
+        _result = [currentIndex, index];
+      }
+    });
+    if (_result.length) {
+      break;
     }
-    return _result
+  }
+  return _result;
 };
 
 twoSum(nums, target);

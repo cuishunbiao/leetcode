@@ -34,22 +34,22 @@
  * 需要理解：n/2个数，是最少占到总数量的一半的，所以最终结果一定是正数。
  */
 var majorityElement = function (nums) {
-    let currentNumber = nums[0];
-    let numCount = 0;
-    nums.forEach(item=>{
-        //如果后面的数和前面的相等
-        if( currentNumber === item ){
-            numCount++;
-        }else{
-            numCount--;
-            //如果总计数为0，那说明当前统计的值需要更换一个
-            if( numCount < 0 ){
-                currentNumber = item;
-                numCount = 0;
-            }
-        }
-    })
-    return currentNumber;
+  let currentNumber = nums[0];
+  let numCount = 0;
+  nums.forEach((item) => {
+    //如果后面的数和前面的相等
+    if (currentNumber === item) {
+      numCount++;
+    } else {
+      numCount--;
+      //如果总计数为0，那说明当前统计的值需要更换一个
+      if (numCount < 0) {
+        currentNumber = item;
+        numCount = 0;
+      }
+    }
+  });
+  return currentNumber;
 };
 
-console.log(majorityElement([2,2,1,3,1,1,4,1,1,5,1,1,6]))
+console.log(majorityElement([2, 2, 1, 3, 1, 1, 4, 1, 1, 5, 1, 1, 6]));

@@ -6,22 +6,22 @@
  * 第二次，遍历寻找第一个值不等于 -1 的值
  */
 var firstUniqChar = function (s) {
-    let i = 0;
-    let sMap = new Map();
-    if( !s.length ) return -1
-    if( s.length === 1 ) return 0
-    // for(let item of Array.from(s).entries()){
-    for(let item of s){
-        if (sMap.has(item) ){
-            sMap.set(item, -1)
-        }else{
-            sMap.set(item, i)
-        }
-        i++
+  let i = 0;
+  let sMap = new Map();
+  if (!s.length) return -1;
+  if (s.length === 1) return 0;
+  // for(let item of Array.from(s).entries()){
+  for (let item of s) {
+    if (sMap.has(item)) {
+      sMap.set(item, -1);
+    } else {
+      sMap.set(item, i);
     }
-    for( let [key,value] of sMap){
-        if( value !== -1 ) return value
-    }
-    return -1;
+    i++;
+  }
+  for (let [key, value] of sMap) {
+    if (value !== -1) return value;
+  }
+  return -1;
 };
-firstUniqChar('z')
+firstUniqChar("z");
