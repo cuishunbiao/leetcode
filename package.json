@@ -11,7 +11,10 @@
     "url": "git+https://github.com/cuishunbiao/leetcode.git"
   },
   "lint-staged": {
-    "src": "prettier --write --ignore-unknown"
+    "**/src": [
+      "eslint",
+      "prettier --write"
+    ]
   },
   "author": "",
   "license": "ISC",
@@ -20,6 +23,7 @@
   },
   "homepage": "https://github.com/cuishunbiao/leetcode#readme",
   "devDependencies": {
+    "eslint": "^7.31.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1"
   }
