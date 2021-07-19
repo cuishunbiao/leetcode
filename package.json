@@ -4,17 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "precommit": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cuishunbiao/leetcode.git"
-  },
-  "lint-staged": {
-    "src/*": [
-      "eslint",
-      "prettier --write"
-    ]
   },
   "author": "",
   "license": "ISC",
