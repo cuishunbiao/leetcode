@@ -9,7 +9,7 @@
   },
   "lint-staged": {
     "src/**/*.js": [
-      "npm prettier --write"
+      "npm run prettier --write"
     ]
   },
   "repository": {
