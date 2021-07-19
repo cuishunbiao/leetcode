@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "precommit": "eslint src/**/*.js"
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js": ["prettier --write"]
   },
   "repository": {
     "type": "git",
