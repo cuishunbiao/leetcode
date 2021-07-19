@@ -5,11 +5,11 @@
   "main": "index.js",
   "scripts": {
     "precommit": "webpack  --config ./web/webpack.config.js",
-    "lint": "eslint basic"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint"
+      "pre-commit": "npm test"
     }
   },
   "repository": {
