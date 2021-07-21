@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/binary-search/binary-search.ts"
+      "program": "${workspaceFolder}/src/binary-search/search-insert-position.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
