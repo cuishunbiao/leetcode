@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>抽随机数</title>
+  </head>
+  <body>
+    <button onclick="startFn()">抽取</button>
+    <p>随机数为：<span id="nums"></span></p>
+
+    <script>
+      let arr = [...Array(13).keys()];
+      let startFn = function () {
+        if (!arr.length) return;
+        let _index = Math.floor(Math.random() * arr.length); //随机获取的下标
+        let _a = document.getElementById("nums").innerHTML;
+        document.getElementById("nums").innerHTML = ++arr[_index];
+        arr[_index] = arr[arr.length - 1];
+        --arr.length;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+{
+  "name": "leetcode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "prepare": "husky install",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/**/*.js, src/**/*.ts": [
+      "git add .",
+      "prettier --write"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cuishunbiao/leetcode.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cuishunbiao/leetcode/issues"
+  },
+  "homepage": "https://github.com/cuishunbiao/leetcode#readme",
+  "devDependencies": {
+    "eslint": "^7.31.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.0.1",
+    "prettier": "^2.3.2"
+  }
+}

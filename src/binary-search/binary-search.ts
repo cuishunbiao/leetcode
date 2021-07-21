@@ -1,0 +1,37 @@
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number}
+
+ 给定一个 n 个元素有序的（升序）整型数组 nums 和一个目标值 target  ，写一个函数搜索 nums 中的 target，如果目标值存在返回下标，否则返回 -1。
+
+
+示例 1:
+
+输入: nums = [-1,0,3,5,9,12], target = 9
+输出: 4
+解释: 9 出现在 nums 中并且下标为 4
+示例 2:
+
+输入: nums = [-1,0,3,5,9,12], target = 2
+输出: -1
+解释: 2 不存在 nums 中因此返回 -1
+
+ */
+// 二分查找，先定义三个变量，left,middle,right
+var search = function (nums, target) {
+    let pivot, left = 0, right = nums.length - 1;
+    while (left <= right) {
+        pivot = Math.floor(left + (right - left) / 2);// 计算中间再下标
+        if (nums[pivot] === target) {
+            return pivot;
+        } else if (nums[left] < target) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+    return -1;
+};
+
+console.log(search([-1,0,3,5,9,12,15,50,100,120,140,180,200,230,400,500,600], 3));
