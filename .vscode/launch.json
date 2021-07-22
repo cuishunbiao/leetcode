@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/double-pointer/rotate-array.ts"
+      "program": "${workspaceFolder}/src/double-pointer/move-zeroes.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
