@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/double-pointer/two-sum-ii-input-array-is-sorted.ts"
+      "program": "${workspaceFolder}/src/double-pointer/reverse-words-in-a-string-iii.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
