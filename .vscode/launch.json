@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/sliding-window/longest-substring-without-repeating-characters.ts"
+      "program": "${workspaceFolder}/src/first-search/flood-fill.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
