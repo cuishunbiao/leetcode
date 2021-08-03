@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/first-search/flood-fill.ts"
+      "program": "${workspaceFolder}/src/linked/merge-two-sorted-lists.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
