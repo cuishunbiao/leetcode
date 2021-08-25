@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/linked/merge-two-sorted-lists.ts"
+      "program": "${workspaceFolder}/src/dp/min-cost-climbing-stairs.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
