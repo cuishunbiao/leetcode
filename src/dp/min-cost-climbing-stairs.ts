@@ -3,7 +3,6 @@
  * @return {number}
  */
 var minCostClimbingStairs = function (cost) {
-    debugger
     const n = cost.length;
     const dp = new Array(n + 1);
     dp[0] = dp[1] = 0;
