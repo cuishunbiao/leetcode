@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/dynamic/bu-tong-lu-jing-by-leetcode-solution-hzjf.ts"
+      "program": "${workspaceFolder}/src/minimum-path-sum.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
