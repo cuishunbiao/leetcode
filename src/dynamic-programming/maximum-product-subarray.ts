@@ -5,11 +5,19 @@
  * 
  */
 var maxProduct = function (nums) {
-    let pre = 0, maxNums = nums[0] * nums[0]
-    nums.forEach(item => {
-        pre = Math.max((item * pre), item)
-        maxNums = Math.max(pre, maxNums)
-    });
-    return maxNums
+    let prevMax = nums[0]
+    let prevMin = nums[0]
+    let result = nums[0]
+    let curMax, curMin
+    for (let i = 1; i < nums.length; i++) {
+        curMax = Math.max(nums[i] * prevMax, nums[i], nums[i] * prevMin)
+        curMin = Math.min(nums[i] * prevMin, nums[i], nums[i] * prevMax)
+
+        prevMax = curMax;
+        prevMin = curMin;
+
+        result = Math.max(curMax, result)
+    }
+    return result
 };
 console.log(maxProduct([2, 3, -2, 4]))
