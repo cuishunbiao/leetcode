@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/minimum-path-sum.ts"
+      "program": "${workspaceFolder}/src/dynamic-programming/coin-change.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]

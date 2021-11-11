@@ -10,7 +10,7 @@ var minPathSum = function (grid) {
     const m = grid.length;
     const n = grid[0].length;
     let dp = new Array(m).fill(0).map(() => new Array(n).fill(0))
-
+    debugger
     for (let y = 0; y < m.length; y++) {
         // dp[y][0] = 
     }
