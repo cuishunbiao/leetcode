@@ -9,7 +9,7 @@
       "request": "launch",
       "name": "Launch Program",
       "skipFiles": ["<node_internals>/**"],
-      "program": "${workspaceFolder}/src/data-structure/maximum-subarray.ts"
+      "program": "${workspaceFolder}/src/data-structure/best-time-to-buy-and-sell-stock.ts"
       // "program": "${workspaceFolder}/linked/SingleList"
     }
   ]
