@@ -1,8 +1,0 @@
-{
-    "editor.formatOnType": true,
-    "editor.formatOnSave": true,
-    "prettier.semi": false,
-    "emmet.excludeLanguages": [
-        "markdown"
-    ], //去掉代码结尾的分号
-}
