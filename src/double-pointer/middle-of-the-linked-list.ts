@@ -41,7 +41,7 @@
  * 快指针 跑两步；
  * 慢指针 跑一步；
  */
-var middleNode = function(head) {
+var middleNode = function (head) {
     let fast = head, slow = head;
     // 只需要判断一个 next 节点，保证 next 节点存在即可
     while (fast && fast.next) {

@@ -45,6 +45,7 @@ Trie.prototype.search = function (word) {
  * Returns if there is any word in the trie that starts with the given prefix. 
  * @param {string} prefix
  * @return {boolean}
+ * 
  */
 Trie.prototype.startsWith = function (prefix) {
     return this.searchPrefix(prefix)
