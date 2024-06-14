@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/merge-strings-alternately.js"
+            "program": "${workspaceFolder}/src/75/greatest-common-divisor-of-strings.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
