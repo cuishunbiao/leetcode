@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/kids-with-the-greatest-number-of-candies.js"
+            "program": "${workspaceFolder}/src/75/can-place-flowers.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
