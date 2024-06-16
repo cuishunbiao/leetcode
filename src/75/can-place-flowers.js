@@ -5,15 +5,6 @@
  * 
  */
 var canPlaceFlowers = function (flowerbed, n) {
-
-    // const first = flowerbed[0] === 0
-    // const second = flowerbed[1] === 0
-    // if (first && second) {
-    //     debugger
-    //     n -= 1;
-    //     flowerbed[0] = 1
-    // }
-
     for (let i = 0; i < flowerbed.length; i++){
         // if prev value is 0 and next value is 0, then placed flower
         const current = flowerbed[i] === 0
