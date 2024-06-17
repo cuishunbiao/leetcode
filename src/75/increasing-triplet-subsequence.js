@@ -2,32 +2,26 @@
  * @param {number[]} nums
  * @return {boolean}
  */
-var increasingTriplet = function (nums) {
-    // number = 0
-    // 定义两个指针，j 比 i 多 1，如果
-    // j > i 则加 1，否则 result push 入数组，最终 Math.max()
-    // 继续 j++ 和 i++；
-
-    if (nums.length < 3) return false
-    const cache = []
-    let number = 1
-
-    for (let i = 0, j = 1; j < nums.length; ) {
-        if (nums[j] > nums[i]) {
-            number++
-        } else {
-            cache.push(number)
-            number = 1
+var increasingTriplet = function(nums) {
+    let firstNum = Infinity;
+    let secoundNum = Infinity;
+    
+    for(let currentNum of nums){
+    
+        if(currentNum > secoundNum){
+            return true;
         }
-        j++
-        i++
+    
+        if(currentNum > firstNum){
+            secoundNum = currentNum;
+        }else{
+            firstNum = currentNum
+        }
     }
-    number && cache.push(number)
+    return false;
+};
 
-    return Math.max(...cache) >= 3
-}
-
-console.log(increasingTriplet([20, 100, 10, 12, 5, 13]))
+console.log(increasingTriplet([1,1,-2,6]))
 
 // Example 1:
 
