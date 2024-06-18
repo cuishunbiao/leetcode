@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/increasing-triplet-subsequence.js"
+            "program": "${workspaceFolder}/src/75/string-compression.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
