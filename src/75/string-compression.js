@@ -7,25 +7,62 @@
  *
  */
 var compress = function (chars) {
-    let currentChar = chars[0]
-    let number = 1
-    for (let i = 1; i < chars.length; i++) {
-        if (chars[i] === currentChar) {
-            number++
-        } else {
-            let chars0 = chars[0]
-            if (number > 1) {
-                chars0 += number
+    let index = 0
+    let i = 0
+    while (i < chars.length) {
+        debugger
+        let currentChar = chars[i]
+        let count = 0
+        while (i < chars.length && currentChar === chars[i]) {
+            i++
+            count++
+        }
+        chars[index] = currentChar
+        index++
+
+        if (count > 1) {
+            const countStr = count.toString()
+            for (let j = 0; j < countStr.length; j++) {
+                chars[index] = countStr[j]
+                index++
             }
-            chars[0] = chars0 + chars[i]
-            currentChar = chars[i]
-            number = 1
         }
     }
-    if (number > 1) {
-        chars[0] = chars[0] + number
-    }
-    return chars[0].split('')
+    return index
 }
-
+// ['a', 'a']
+// ["a","b","c"]
+// ['a', 'a', 'b', 'b', 'c', 'c', 'c']
 console.log(compress(['a', 'a', 'b', 'b', 'c', 'c', 'c']))
+
+// var compress = function (chars) {
+//     if (chars.length === 1) return 1
+//     let currentChar = chars[0]
+//     let s = ''
+//     let i = 1
+//     let number = 1
+//     while (i <= chars.length) {
+//         if (currentChar === chars[i]) {
+//             number++
+//         } else {
+//             s += currentChar
+//             currentChar = chars[i]
+//             if (number > 1) {
+//                 s += number
+//             }
+//             number = 1
+//         }
+//         i++
+//     }
+//     if (number > 1) {
+//         s += currentChar
+//         if (number > 1) {
+//             s += number
+//         }
+//     }
+//     chars.length = 0
+//     for (let c of s) {
+//         chars.push(c)
+//     }
+//     return chars.length
+// }
