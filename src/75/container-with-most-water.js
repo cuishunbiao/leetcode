@@ -5,26 +5,20 @@
  *
  */
 var maxArea = function (height) {
-    // i 的值要是前面最大的值；
-    // let maxNumber = height[0]
-    const result = []
-    // const tally = (maxNumber, current, j, i) => {
-    //     debugger
-    //     console.log(maxNumber, current, j, i)
-    //     return Math.min(maxNumber, current) * (j - i)
-    // }
+    let result = 0
     const len = height.length - 1
-    // const middle = Math.floor(len / 2)
     for (let i = 0, j = len; i < j; ) {
-        const a = Math.min(height[i], height[j]) * (j - i)
-        result.push(a)
-        if (height[i] >= height[j]) {
+        const resulti = height[i]
+        const resultj = height[j]
+        const tally = Math.min(resulti, resultj) * (j - i)
+        result = Math.max(result, tally)
+        if (resulti >= resultj) {
             j--
         } else {
             i++
         }
     }
-    return Math.max(...result)
+    return result
 }
 const height = [1, 8, 6, 2, 5, 4, 8, 3, 7]
 console.log(maxArea(height))
