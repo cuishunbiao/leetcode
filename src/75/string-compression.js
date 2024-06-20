@@ -10,7 +10,6 @@ var compress = function (chars) {
     let index = 0
     let i = 0
     while (i < chars.length) {
-        debugger
         let currentChar = chars[i]
         let count = 0
         while (i < chars.length && currentChar === chars[i]) {
