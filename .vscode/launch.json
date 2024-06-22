@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/max-number-of-k-sum-pairs.js"
+            "program": "${workspaceFolder}/src/75/maximum-average-subarray-i.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
