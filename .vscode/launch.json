@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/maximum-number-of-vowels-in-a-substring-of-given-length.js"
+            "program": "${workspaceFolder}/src/75/max-consecutive-ones-iii.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
