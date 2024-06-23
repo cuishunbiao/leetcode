@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/longest-subarray-of-1s-after-deleting-one-element.js"
+            "program": "${workspaceFolder}/src/75/find-pivot-index.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
