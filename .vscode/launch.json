@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/find-the-difference-of-two-arrays.js"
+            "program": "${workspaceFolder}/src/75/unique-number-of-occurrences.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
