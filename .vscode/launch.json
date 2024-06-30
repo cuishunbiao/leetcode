@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/removing-stars-from-a-string.js"
+            "program": "${workspaceFolder}/src/75/decode-string.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
