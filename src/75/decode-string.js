@@ -8,34 +8,25 @@
  * 
  */
 var decodeString = function (s) {
-    let number = 0;
-    let result = ''
-    const numberStack = []
-    const stringStack = []
-    let isStack = false;
-    for (let item of s) {
+    let stack = [];
+    let currentNum = 0;
+    let currentStr = ''; // current string
 
-        if (typeof item === 'Number') {
-            numberStack.push(item)
-        } else if (item === '[') {
-            // 入栈
-            isStack = true
-
-        } else if (item === ']') {
-            // 出栈
-            isStack = false;
-
+    for (let char of s) {
+        if (!isNaN(char)) {
+            currentNum = parseInt(char, 10)
+        } else if (char === '[') {
+            stack.push([currentStr, currentNum])
+            currentStr = '';
+            currentNum = 0
+        } else if (char === ']') {
+            let [prevStr, num] = stack.pop()
+            currentStr = prevStr + currentStr.repeat(num)
         } else {
-            if (isStack) {
-                stack.push(item)
-            }
+            currentStr += char
         }
     }
-
-    // repeat function
-    const repeatItems = (number, string) => {
-        return string.repeat(number)
-    }
+    return currentStr
 
 };
 
