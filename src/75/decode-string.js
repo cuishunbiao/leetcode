@@ -14,7 +14,7 @@ var decodeString = function (s) {
 
     for (let char of s) {
         if (!isNaN(char)) {
-            currentNum = parseInt(char, 10)
+            currentNum = currentNum * 10 + parseInt(char);
         } else if (char === '[') {
             stack.push([currentStr, currentNum])
             currentStr = '';
@@ -30,5 +30,5 @@ var decodeString = function (s) {
 
 };
 
-const s = "3[a]2[bc]"
+const s = "100[leetcode]"
 console.log(decodeString(s));
