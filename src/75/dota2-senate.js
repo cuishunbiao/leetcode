@@ -2,24 +2,32 @@
  * @param {string} senate
  * @return {string}
  */
-var predictPartyVictory = function (senate) {
-    let senateR = []
-    let senateD = []
-    for (let sen of senate) {
-        if (sen === 'R') {
-            senateR.push(sen)
+function predictPartyVictory(senate) {
+    let radiant = [];
+    let dire = [];
+    let n = senate.length;
+    // 填充队列
+    for (let i = 0; i < n; i++) {
+        if (senate[i] === 'R') {
+            radiant.push(i);
         } else {
-            senateD.push(sen)
+            dire.push(i);
         }
     }
-
-    if (senateR.length === senateD.length) {
-        return senate[0] === 'R' ? 'Radiant' : 'Dire'
-    } else if (senateR.length > senateD.length) {
-        return 'Radiant'
-    } else {
-        return 'Dire'
+    // 模拟投票过程
+    while (radiant.length > 0 && dire.length > 0) {
+        let r = radiant.shift();
+        let d = dire.shift();
+        if (r < d) {
+            // Radiant先行使权利，禁止Dire的参议员
+            radiant.push(r + n);
+        } else {
+            // Dire先行使权利，禁止Radiant的参议员
+            dire.push(d + n);
+        }
     }
-};
-const senate = "RDD"
+    // 确定胜利方
+    return radiant.length > 0 ? "Radiant" : "Dire";
+}
+const senate = "DDRRR"
 console.log(predictPartyVictory(senate));
