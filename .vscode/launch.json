@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/delete-the-middle-node-of-a-linked-list.js"
+            "program": "${workspaceFolder}/src/75/odd-even-linked-list.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
