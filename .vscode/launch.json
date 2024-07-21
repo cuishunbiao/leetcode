@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/rotate-image.js"
+            "program": "${workspaceFolder}/src/75/spiral-matrix.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
