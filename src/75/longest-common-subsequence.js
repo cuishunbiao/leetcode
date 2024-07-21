@@ -4,26 +4,22 @@
  * @return {number}
  */
 var longestCommonSubsequence = function (text1, text2) {
-    if (!text2) return 0
-    let count = 0;
-    let j = 0;
+    const m = text1.length;
+    const n = text2.length;
 
-    let long = text1;
-    let short = text2;
-
-    if (text2.length > text1.length) {
-        long = text2;
-        short = text1;
-    }
-
-    for (let i = 0; i < long.length; i++) {
-        const char = long[i]
-        if (char === short[j]) {
-            count++
-            j++
+    // defined a two-dimensional array to save middle result
+    const dp = Array(m + 1).fill().map(() => Array(n + 1).fill(0))
+    // dp[i][j] indicate text1 prev char and text2 prev char
+    for (let i = 1; i <= m; i++) {
+        for (let j = 1; j <= n; j++) {
+            if (text1[i - 1] === text2[j - 1]) {
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            } else {
+                dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1])
+            }
         }
     }
-    return count
+    return dp[m][n]
 };
 
 const text1 = "bl", text2 = "yby"
