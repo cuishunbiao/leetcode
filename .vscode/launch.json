@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/spiral-matrix.js"
+            "program": "${workspaceFolder}/src/75/best-time-to-buy-and-sell-stock-with-transaction-fee.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
