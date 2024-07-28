@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/75/best-time-to-buy-and-sell-stock-ii.js"
+            "program": "${workspaceFolder}/src/75/counting-bits.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
