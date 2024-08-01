@@ -17,14 +17,13 @@ var minEatingSpeed = function (piles, h) {
         const eath = eatFn(mid)
         if (eath > h) {
             left = mid + 1;
-        } else if (eath < h) {
+        } else if (eath <= h) {
             right = mid;
-        } else {
-            return mid
         }
     }
+    return left
 };
-const piles = [3, 6, 7, 11], h = 8
+const piles = [30, 11, 23, 4, 20], h = 6
 console.log(minEatingSpeed(piles, h))
 
 // Example 1:
