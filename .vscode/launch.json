@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/valid-anagram.js"
+            "program": "${workspaceFolder}/src/150/reverse-string.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
