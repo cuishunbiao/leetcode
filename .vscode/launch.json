@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/maximum-subarray.js"
+            "program": "${workspaceFolder}/src/150/move-zeroes.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
