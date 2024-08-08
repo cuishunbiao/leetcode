@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/contains-duplicate.js"
+            "program": "${workspaceFolder}/src/150/longest-common-prefix.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
