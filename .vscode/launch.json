@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/single-number.js"
+            "program": "${workspaceFolder}/src/150/subarray-sum-equals-k.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
