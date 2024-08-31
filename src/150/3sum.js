@@ -18,9 +18,10 @@
  * 
  */
 var threeSum = function (nums) {
-    const sortNums = nums.sort((a, b) => a - b)
+    if (nums.length < 3) return []
+    nums.sort((a, b) => a - b)
     const result = new Set();
-    for (let i = 0; i < sortNums.length - 2; i++) {
+    for (let i = 0; i < nums.length - 2; i++) {
         let left = i + 1, right = nums.length - 1
         while (left < right) {
             const val = nums[i] + nums[left] + nums[right]
