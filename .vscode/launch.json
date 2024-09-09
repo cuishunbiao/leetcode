@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/find-first-and-last-position-of-element-in-sorted-array.js"
+            "program": "${workspaceFolder}/src/150/spiral-matrix.js"
             // "program": "${workspaceFolder}/linked/SingleList"
         }
     ]
