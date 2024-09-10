@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "prepare": "husky install",
+    "start": "node --loader ts-node/esm src/150/kth-largest-element-in-an-array.ts",
     "precommit": "lint-staged"
   },
   "lint-staged": {
@@ -27,6 +29,9 @@
     "eslint": "^7.31.0",
     "husky": "^7.0.1",
     "lint-staged": "^11.0.1",
-    "prettier": "^2.3.2"
+    "prettier": "^2.3.2",
+    "ts-node": "^10.9.2"
+  },
+  "dependencies": {
   }
 }
