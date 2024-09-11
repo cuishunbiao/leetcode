@@ -9,8 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/kth-largest-element-in-an-array.ts",
-            "runtimeArgs": ["--import", "data:text/javascript,import { register } from 'node:module'; import { pathToFileURL } from 'node:url'; register('ts-node/esm', pathToFileURL('./'));"],
+            "program": "${workspaceFolder}/src/150/maximumSubarray.js",
             "sourceMaps": true,
             "env": {
                 "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
