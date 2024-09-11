@@ -8,6 +8,6 @@
         "outDir": "./dist",
         "strict": true
     },
-    "include": ["src/**/*.ts", "src/150/maximumSubarray.js"],
+    "include": ["src/**/*.ts", "src/150/maximumSubarray.js", "src/150/find-all-numbers-disappeared-in-an-array.js"],
     "exclude": ["node_modules"]
 }
