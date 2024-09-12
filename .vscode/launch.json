@@ -9,7 +9,7 @@
             "request": "launch",
             "name": "Launch Program",
             "skipFiles": ["<node_internals>/**"],
-            "program": "${workspaceFolder}/src/150/find-all-numbers-disappeared-in-an-array.js",
+            "program": "${workspaceFolder}/src/150/find-the-duplicate-number.js",
             "sourceMaps": true,
             "env": {
                 "TS_NODE_PROJECT": "${workspaceFolder}/tsconfig.json"
